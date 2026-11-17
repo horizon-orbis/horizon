@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "cpu": "x86-64",
+  "os": "freebsd",
+  "env": "elf",
+  "vendor": "scei",
+  "llvm-target": "x86_64-pc-freebsd12-elf",
+  "data-layout": "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128",
+  "target-pointer-width": 64,
+  "target-endian": "little",
+  "executables": true,
+  "position-independent-executables": true,
+  "dynamic-linking": true,
+  "linker-flavor": "gnu-lld",
+  "linker": "ld.lld",
+  "panic-strategy": "abort",
+  "relocation-model": "pic",
+  "code-model": "small",
+  "pre-link-args": {
+    "gnu-lld": [
+      "-m", "elf_x86_64",
+      "--eh-frame-hdr"
+    ]
+  },
+  "post-link-args": {}
+}
